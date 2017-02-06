@@ -1,0 +1,46 @@
+﻿@model ChoixResto.Models.Resto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateRestaurant</title>
+    <link type="text/css" href="~/Content/Site.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Restaurant ID = @ViewBag.Id</h1>
+
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <legend>Modifier un restaurant</legend>
+
+                <div>
+                    @Html.LabelFor(model => model.Name)
+                    @Html.TextBoxFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+
+                <br />
+
+                <div>
+                    @Html.LabelFor(model => model.Phone)
+                    @Html.TextBoxFor(model => model.Phone)
+                </div>
+
+                <br />
+
+                <input type="submit" value="Modifier" />
+            </fieldset>
+        }
+    </div>
+</body>
+</html>

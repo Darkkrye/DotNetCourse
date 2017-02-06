@@ -1,0 +1,57 @@
+﻿@*@model ChoixResto.ViewModels.AccueilViewModel*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Je suis la vue index.
+    </div>
+
+    @*
+
+    <br />
+    <br />
+
+    @Html.Partial("Connexion", Model)
+
+    <br />
+    <br />
+
+    @Html.Action("AfficheListeRestaurant")
+
+    <br />
+    <br />
+
+    <ul>
+        <li>@ViewData["message"]</li>
+        <li>@(((DateTime)ViewData["date"]).ToString("dd/MM/yyyy"))</li>
+        @{ 
+            ChoixResto.Models.Resto resto = (ChoixResto.Models.Resto)ViewData["resto"];
+        }
+        <li>@resto.Name</li>
+        <li>@resto.Phone</li>
+    </ul>
+
+    <ul>
+        <li>@ViewBag.message</li>
+        <li>@ViewBag.date.ToString("dd/MM/yyyy")</li>
+        <li>@ViewBag.resto.Name</li>
+        <li>@ViewBag.resto.Phone</li>
+    </ul>
+
+    <ul>
+        <li>@Model.Message</li>
+        <li>@Model.Date.ToString("dd/MM/yyyy")</li>
+        <li>@Model.Resto.Name</li>
+        <li>@Model.Resto.Phone</li>
+    </ul>*@
+</body>
+</html>
